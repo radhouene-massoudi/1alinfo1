@@ -1,0 +1,37 @@
+<p>traitement works!</p>
+{{klass | uppercase}}
+<input type="submit" value="show Msg" (click)="changeColor()">
+<div [style.backgroundColor]="kolor">
+    my div
+</div>
+<input type="text" [(ngModel)]="kolor">
+<div *ngFor="let p of listProdcut">
+    <div *ngIf="p.quantity!=0">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+    </div>
+</div>
+<hr>
+<div *ngFor="let p of listProdcut">
+    <div *ngIf="p.quantity ==0">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+        <input type="submit" value="buy" disabled>
+    </div>
+    <div *ngIf="p.quantity !=0">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+        <input type="submit" value="buy">
+    </div>
+</div>
+<hr>
+<div *ngFor="let p of listProdcut">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+        <input type="submit" value="buy" [disabled]="p.quantity==0">
+
+</div>
