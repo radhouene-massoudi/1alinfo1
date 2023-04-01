@@ -35,3 +35,36 @@
         <input type="submit" value="buy" [disabled]="p.quantity==0">
 
 </div>
+
+<hr>
+<h4>seance 01/04/2023</h4>
+<div *ngFor="let p of listProdcut">
+    <div *ngIf="p.quantity==0">
+        <span [style.backgroundColor]="'red'">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+        <input type="submit" value="buy" [disabled]="p.quantity==0">
+    </span>
+    </div>
+    <div *ngIf="p.quantity!==0">
+        <span [style.backgroundColor]="'green'">
+        {{p.id}}
+        {{p.title}}
+        {{p.quantity}}
+        <input type="submit" value="buy" [disabled]="p.quantity==0">
+    </span>
+    </div>
+</div>
+<hr>
+<input type="text" [(ngModel)]="search">
+<div *ngFor="let p of listProdcut; let i=index">
+    <span *ngIf="p.title==search ||search==''">
+    <div [ngStyle]="{'backgroundColor':p.quantity==0 ?'red':'green'}">
+    {{p.id}}
+    {{p.title}}
+    {{p.quantity}}
+    <input type="submit" value="buy" [disabled]="p.quantity==0" (click)="decreaseQauntity(i)">
+</div>
+</span>
+</div>
