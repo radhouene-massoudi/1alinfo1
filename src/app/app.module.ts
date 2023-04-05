@@ -7,13 +7,21 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { TraitementComponent } from './traitement/traitement.component';
 import { TestComponent } from './test/test.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { LoginComponent } from './login/login.component';
+import { DetailProductComponent } from './gestionproduit/detail-product/detail-product.component';
+import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     TraitementComponent,
-    TestComponent
+    TestComponent,
+    NotfoundComponent,
+    LoginComponent,
+    DetailProductComponent,
+    AddproductComponent
   ],
   imports: [
     BrowserModule,

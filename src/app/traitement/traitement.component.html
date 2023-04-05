@@ -64,6 +64,7 @@
     {{p.id}}
     {{p.title}}
     {{p.quantity}}
+    <a [routerLink]="['/detail/',p.id]">detail product</a>
     <input type="submit" value="buy" [disabled]="p.quantity==0" (click)="decreaseQauntity(i)">
 </div>
 </span>
