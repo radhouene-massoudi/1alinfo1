@@ -1,0 +1,21 @@
+<input type="text" [(ngModel)]="search">
+<table class="table">
+    <tr><th>reference</th><th>titre</th><th>entreprise</th><th>etat</th></tr>
+    <tr *ngFor="let Emploi of listeEmploi; let i=index">
+        <div *ngIf="search==Emploi.entreprise  ||search==''">
+      <td>{{Emploi.reference}}</td>
+      <td>{{Emploi.titre}}</td>
+      <td>{{Emploi.entreprise}}</td>
+      <td>{{Emploi.etat}}</td>
+      <td><button class="btn btn-success" [disabled]="Emploi.etat==false">postuler</button></td>
+    </div>
+  
+    </tr>
+  
+  
+  
+  </table>
+ <input type="submit" value="billan" (click)="billan()">
+ <div *ngIf="show">
+ {{bnoffre}}
+</div> 

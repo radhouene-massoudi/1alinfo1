@@ -11,6 +11,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { DetailProductComponent } from './gestionproduit/detail-product/detail-product.component';
 import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
+import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddproductComponent } from './gestionproduit/addproduct/addproduct.comp
     NotfoundComponent,
     LoginComponent,
     DetailProductComponent,
-    AddproductComponent
+    AddproductComponent,
+    OffresEmploiComponent
   ],
   imports: [
     BrowserModule,

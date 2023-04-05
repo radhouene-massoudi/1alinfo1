@@ -7,11 +7,13 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { LoginComponent } from './login/login.component';
 import { DetailProductComponent } from './gestionproduit/detail-product/detail-product.component';
 import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
+import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 
 const r: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
  // {path:'',component:FirstComponent},
  {path:'add',component:AddproductComponent},
+ {path:'offre',component:OffresEmploiComponent},
  {path:'detail/:id',component:DetailProductComponent},
   {path:'login',component:LoginComponent},
   {path:'test',component:TestComponent},

@@ -18,5 +18,10 @@ required
     <input type="text" name="price" ngModel>
     <label>quantity</label>
     <input type="text" name="quantity" ngModel>
-    <input type="submit" value="save" [disabled]="f.invalid"(click)="showForm(idt)">
+    <input type="submit" value="save" [disabled]="f.invalid"(click)="showForm(f.value)">
 </form>
+<div *ngFor="let product of products">
+{{product.id}}
+{{product.title}}
+{{product.price}}
+</div>
