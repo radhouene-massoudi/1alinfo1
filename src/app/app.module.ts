@@ -12,7 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { DetailProductComponent } from './gestionproduit/detail-product/detail-product.component';
 import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './gestionproduit/products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +24,14 @@ import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
     LoginComponent,
     DetailProductComponent,
     AddproductComponent,
-    OffresEmploiComponent
+    OffresEmploiComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

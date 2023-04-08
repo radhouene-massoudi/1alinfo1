@@ -8,11 +8,13 @@ import { LoginComponent } from './login/login.component';
 import { DetailProductComponent } from './gestionproduit/detail-product/detail-product.component';
 import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
+import { ProductsComponent } from './gestionproduit/products/products.component';
 
 const r: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
  // {path:'',component:FirstComponent},
  {path:'add',component:AddproductComponent},
+ {path:'products',component:ProductsComponent},
  {path:'offre',component:OffresEmploiComponent},
  {path:'detail/:id',component:DetailProductComponent},
   {path:'login',component:LoginComponent},

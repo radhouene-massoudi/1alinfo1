@@ -20,5 +20,8 @@ export class DetailProductComponent implements OnInit {
    // console.log(this.ac.snapshot.params['test'])
    
   }
+  test(){
+    //traitement  
+    }
 
 }
