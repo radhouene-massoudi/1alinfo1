@@ -9,6 +9,8 @@ import { DetailProductComponent } from './gestionproduit/detail-product/detail-p
 import { AddproductComponent } from './gestionproduit/addproduct/addproduct.component';
 import { OffresEmploiComponent } from './offres-emploi/offres-emploi.component';
 import { ProductsComponent } from './gestionproduit/products/products.component';
+import { RemoveproductComponent } from './gestionproduit/removeproduct/removeproduct.component';
+import { UpdateproductComponent } from './gestionproduit/updateproduct/updateproduct.component';
 
 const r: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
@@ -16,6 +18,8 @@ const r: Routes = [
  {path:'add',component:AddproductComponent},
  {path:'products',component:ProductsComponent},
  {path:'offre',component:OffresEmploiComponent},
+ {path:'update/:id',component:UpdateproductComponent},
+ {path:'remove/:id',component:RemoveproductComponent},
  {path:'detail/:id',component:DetailProductComponent},
   {path:'login',component:LoginComponent},
   {path:'test',component:TestComponent},

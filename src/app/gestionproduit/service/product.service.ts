@@ -15,4 +15,11 @@ export class ProductService {
     //select *
   return  this.http.get('http://localhost:3000/products')
   }
+  removeProducts(id:any){
+return this.http.delete('http://localhost:3000/products/'+id)
+  }
+  updateProduct(data:any,id:any){
+    //put update
+ return this.http.put('http://localhost:3000/products/'+id,data)
+  }
 }
