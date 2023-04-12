@@ -4,4 +4,8 @@
 {{item.title}}
 {{item.price}}
 {{item.quantity}}
+<a [routerLink]="['/remove',item.id]">remove</a>
+<a [routerLink]="['/update',item.id]">update</a>
+<a [routerLink]="['/detail',item.id]">detail</a>
 </div>
+<a [routerLink]="['/add']">add product</a>

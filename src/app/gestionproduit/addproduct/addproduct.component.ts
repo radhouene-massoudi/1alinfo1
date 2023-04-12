@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstService } from 'src/app/first.service';
 import { ProductService } from '../service/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addproduct',
@@ -11,7 +12,8 @@ export class AddproductComponent implements OnInit {
 products:any=[];
   constructor(
     private first:FirstService,
-    private productService: ProductService
+    private productService: ProductService,
+    private router:Router
     ) {}
 
   ngOnInit(): void {
@@ -27,7 +29,7 @@ this.products.push(t);
  save(dataFromForm:any){
 this.productService.addproduct(dataFromForm).subscribe(
   ()=>{
-   alert('next')
+  this.router.navigate(['products'])
   },
   (err)=>{
     //switch case err.status
@@ -35,7 +37,7 @@ console.log(err)
   },
 
   ()=>{
-alert('comp')
+
   }
 );
  }

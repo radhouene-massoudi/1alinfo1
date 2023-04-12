@@ -2,10 +2,10 @@
 <form #f="ngForm">
     
     <label>title</label>
-    <input type="text" name="title"ngModel>
+    <input type="text" name="title"ngModel [(ngModel)]="product.title">
     <label>price</label>
-    <input type="text" name="price" ngModel>
+    <input type="text" name="price" ngModel [(ngModel)]="product.price">
     <label>quantity</label>
-    <input type="text" name="quantity" ngModel>
+    <input type="text" name="quantity" ngModel [(ngModel)]="product.quantity">
     <input type="submit" value="save" (click)="update(f.value)">
 </form>
